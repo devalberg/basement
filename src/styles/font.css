@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Bebas';
+	src: local('BebasNeue'), url(../assets/fonts/BebasNeue-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: local('Futura'), url(../assets/fonts/Futura-CondensedLight.otf) format('opentype');
+}
