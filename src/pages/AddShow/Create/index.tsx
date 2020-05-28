@@ -78,6 +78,10 @@ const Create = () => {
 			/>
 		</Box>
 	);
+
+	const scrollToGuide = () => {
+		
+	}
 	return (
 		<Box>
 			<div className={classes.container}>
@@ -224,7 +228,7 @@ const Create = () => {
 									website
 								</Typography>
 								<Box pt={3}>
-									<Button variant="contained">
+									<Button variant="contained" onClick={scrollToGuide}>
 										view guide
 									</Button>
 								</Box>
