@@ -1,6 +1,6 @@
 import React from "react";
 import useStyles from "./styles";
-import { Grid, Typography, Box, Button } from "@material-ui/core";
+import { Grid, Typography, Box } from "@material-ui/core";
 import basementGatheringsPic from "../../../assets/images/basement-click.png";
 import basementGatheringsPicMobile from "../../../assets/images/basement-click-mobile.png";
 import rustCavePic from "../../../assets/images/rustcave.png";
@@ -12,7 +12,6 @@ import brickHousePicMobile from "../../../assets/images/brick-mobile.png";
 import { useHistory } from "react-router-dom";
 import useXs from "../../../hooks/useXs";
 import useSm from "../../../hooks/useSm";
-import * as Scroll from "react-scroll";
 import BackToTopButton from "../../../components/BackToTopButton";
 
 const popularEvents = [
