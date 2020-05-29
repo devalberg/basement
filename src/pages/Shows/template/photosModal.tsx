@@ -26,13 +26,13 @@ const PhotosModal: React.FC<IProps> = ({
 	const carouselStyles: CarouselStyles = {
 		view: (base) => ({
 			...base,
+			height: "calc(100vh - 54px)",
 		}),
 	};
 	const modalProps: ModalProps = {
 		styles: {
 			dialog: (base) => ({
 				...base,
-				maxWidth: 480,
 			}),
 		},
 	};
