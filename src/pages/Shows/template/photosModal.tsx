@@ -32,7 +32,7 @@ const PhotosModal: React.FC<IProps> = ({
 		styles: {
 			dialog: (base) => ({
 				...base,
-				maxWidth: 640,
+				maxWidth: 480,
 			}),
 		},
 	};
