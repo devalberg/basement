@@ -1,8 +1,4 @@
 import { makeStyles, Theme } from "@material-ui/core/styles";
-<<<<<<< HEAD
-=======
-import bgImage from "../../assets/images/background2.jpg";
->>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 
 const useStyles = makeStyles((theme: Theme) => ({
 	input: {
