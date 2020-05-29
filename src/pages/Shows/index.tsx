@@ -20,4 +20,4 @@ const Shows = () => {
 	);
 };
 
-export default Shows;
+export default React.memo(Shows);

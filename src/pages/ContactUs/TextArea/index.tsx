@@ -16,4 +16,4 @@ const TextArea: React.FC<IProps> = ({ placeholder }) => {
 	);
 };
 
-export default TextArea;
+export default React.memo(TextArea);

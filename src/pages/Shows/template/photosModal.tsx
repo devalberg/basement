@@ -52,4 +52,4 @@ const PhotosModal: React.FC<IProps> = ({
 	);
 };
 
-export default PhotosModal;
+export default React.memo(PhotosModal);

@@ -108,4 +108,4 @@ const Select: React.FC<IProps> = ({
 	);
 };
 
-export default Select;
+export default React.memo(Select);

@@ -293,4 +293,4 @@ const Template: React.FC<IProps> = ({ data }) => {
 	);
 };
 
-export default Template;
+export default React.memo(Template);

@@ -5,23 +5,13 @@ import AllShows from "./AllShows";
 import * as Scroll from "react-scroll";
 
 const Home = () => {
-	const onAllShowClick = () => {
-		setTimeout(() => {
-			Scroll.scroller.scrollTo("all-shows", {
-				duration: 500,
-				smooth: "easeOut",
-				offset: -90,
-			});
-		}, 50);
-	};
-
 	React.useEffect(() => {
 		Scroll.animateScroll.scrollToTop({ duration: 500 });
 	}, []);
 
 	return (
 		<>
-			<Discover onAllShowClick={onAllShowClick} />
+			<Discover />
 			<Switch>
 				<Route path="/all-shows">
 					<Scroll.Element name="all-shows">
@@ -33,4 +23,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default React.memo(Home);

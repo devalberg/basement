@@ -21,4 +21,4 @@ const BackToTopButton = () => {
 	);
 };
 
-export default BackToTopButton;
+export default React.memo(BackToTopButton);

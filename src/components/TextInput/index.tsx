@@ -18,4 +18,4 @@ const TextInput: React.FC<IProps> = ({ placeholder }) => {
 	);
 };
 
-export default TextInput;
+export default React.memo(TextInput);

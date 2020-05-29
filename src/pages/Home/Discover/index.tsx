@@ -42,11 +42,7 @@ interface ISelectedItems {
 	genre: string | null;
 }
 
-interface IProps {
-	onAllShowClick: () => void;
-}
-
-const Discover: React.FC<IProps> = ({ onAllShowClick = () => {} }) => {
+const Discover = () => {
 	const classes = useStyles();
 	const history = useHistory();
 	const [selectedItems, setSelectedItems] = React.useState<ISelectedItems>({
@@ -192,4 +188,4 @@ const Discover: React.FC<IProps> = ({ onAllShowClick = () => {} }) => {
 	);
 };
 
-export default Discover;
+export default React.memo(Discover);

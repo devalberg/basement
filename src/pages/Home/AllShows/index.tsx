@@ -137,4 +137,4 @@ const AllShows = () => {
 	);
 };
 
-export default AllShows;
+export default React.memo(AllShows);

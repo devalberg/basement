@@ -194,4 +194,4 @@ const Guide = () => {
 	);
 };
 
-export default Guide;
+export default React.memo(Guide);

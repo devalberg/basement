@@ -45,4 +45,4 @@ const SideDrawer: React.FC<IProps> = ({ isOpen, onClose }) => {
 	);
 };
 
-export default SideDrawer;
+export default React.memo(SideDrawer);

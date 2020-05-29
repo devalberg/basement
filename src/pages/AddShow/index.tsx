@@ -22,4 +22,4 @@ const AddShow = () => {
 	);
 };
 
-export default AddShow;
+export default React.memo(AddShow);

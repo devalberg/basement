@@ -14,6 +14,7 @@ const ContactUs = () => {
 	React.useEffect(() => {
 		Scroll.animateScroll.scrollToTop({ duration: 500 });
 	}, []);
+
 	return (
 		<div className={classes.container}>
 			<Grid container item>
@@ -62,4 +63,4 @@ const ContactUs = () => {
 	);
 };
 
-export default ContactUs;
+export default React.memo(ContactUs);
