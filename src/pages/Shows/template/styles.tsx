@@ -33,9 +33,14 @@ const useStyles = makeStyles((theme: Theme) => ({
 		color: "#FFF",
 		height: 200,
 		padding: "2rem 1.5rem",
+		width: "70%",
+		[theme.breakpoints.down("md")]: {
+			width: "90%",
+		},
 		[theme.breakpoints.down("sm")]: {
 			height: "fit-content",
 			padding: "0 1rem",
+			width: "100%",
 		},
 	},
 	infoContainer: {
