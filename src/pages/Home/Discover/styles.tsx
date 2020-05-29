@@ -7,10 +7,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		height: "calc(100vh - 96px)",
 		backgroundImage: `url(${bgImage})`,
 		backgroundSize: "cover",
-<<<<<<< HEAD
 		backgroundColor: "#000",
-=======
->>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 		backgroundPosition: "center center",
 		paddingTop: theme.spacing(10),
 		[theme.breakpoints.down("sm")]: {
