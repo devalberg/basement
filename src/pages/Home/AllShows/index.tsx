@@ -53,10 +53,8 @@ const AllShows = () => {
 				<Grid item xs={10}>
 					<Grid container spacing={6}>
 						<Grid item xs={12}>
+							<Typography variant="h2">Headline Event</Typography>
 							<Link to="/shows/3">
-								<Typography variant="h2">
-									Headline Event
-								</Typography>
 								<div>
 									<img
 										src={
