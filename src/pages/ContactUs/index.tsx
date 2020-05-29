@@ -5,16 +5,22 @@ import useStyles from "./styles";
 import TextInput from "../../components/TextInput";
 import TextArea from "./TextArea";
 import useSm from "../../hooks/useSm";
+<<<<<<< HEAD
 import * as Scroll from "react-scroll";
+=======
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 
 const ContactUs = () => {
 	const classes = useStyles();
 	const isSm = useSm();
+<<<<<<< HEAD
 
 	React.useEffect(() => {
 		Scroll.animateScroll.scrollToTop({ duration: 500 });
 	}, []);
 
+=======
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 	return (
 		<div className={classes.container}>
 			<Grid container item>
@@ -63,4 +69,8 @@ const ContactUs = () => {
 	);
 };
 
+<<<<<<< HEAD
 export default React.memo(ContactUs);
+=======
+export default ContactUs;
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70

@@ -85,8 +85,13 @@ const theme = createMuiTheme({
 				borderBottom: "12px solid black",
 				[baseTheme.breakpoints.down("sm")]: {
 					paddingTop: 0,
+<<<<<<< HEAD
 					borderBottom: "5px solid black",
 				},
+=======
+				},
+				zIndex: 99999,
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 			},
 		},
 		MuiDivider: {
@@ -139,11 +144,14 @@ const theme = createMuiTheme({
 			},
 		},
 	},
+<<<<<<< HEAD
 	zIndex: {
 		appBar: 500,
 		modal: 400,
 		drawer: 300,
 	},
+=======
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 });
 
 export default theme;

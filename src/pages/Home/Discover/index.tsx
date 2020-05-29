@@ -5,7 +5,10 @@ import { Grid, Box, Typography, Button } from "@material-ui/core";
 import useXs from "../../../hooks/useXs";
 import useSm from "../../../hooks/useSm";
 import { useHistory } from "react-router-dom";
+<<<<<<< HEAD
 import * as Scroll from "react-scroll";
+=======
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 
 const dates: string[] = [
 	"All Months",
@@ -42,7 +45,15 @@ interface ISelectedItems {
 	genre: string | null;
 }
 
+<<<<<<< HEAD
 const Discover = () => {
+=======
+interface IProps {
+	onAllShowClick: () => void;
+}
+
+const Discover: React.FC<IProps> = ({ onAllShowClick = () => {} }) => {
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 	const classes = useStyles();
 	const history = useHistory();
 	const [selectedItems, setSelectedItems] = React.useState<ISelectedItems>({
@@ -67,6 +78,7 @@ const Discover = () => {
 
 	const navigateAllShows = () => {
 		history.push("/all-shows");
+<<<<<<< HEAD
 		setTimeout(() => {
 			Scroll.scroller.scrollTo("all-shows", {
 				duration: 500,
@@ -74,6 +86,9 @@ const Discover = () => {
 				offset: -90,
 			});
 		}, 50);
+=======
+		onAllShowClick();
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 	};
 
 	return (
@@ -166,10 +181,14 @@ const Discover = () => {
 										display="flex"
 										justifyContent="center"
 									>
+<<<<<<< HEAD
 										<Box
 											width={isSm ? "100%" : "30%"}
 											mb={isSm ? 3 : 1}
 										>
+=======
+										<Box width={isSm ? "100%" : "30%"}>
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 											<Button
 												variant="contained"
 												onClick={navigateAllShows}
@@ -188,4 +207,8 @@ const Discover = () => {
 	);
 };
 
+<<<<<<< HEAD
 export default React.memo(Discover);
+=======
+export default Discover;
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70

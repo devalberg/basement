@@ -8,22 +8,34 @@ const useStyles = makeStyles((theme: Theme) => ({
 		backgroundImage: `url(${bgImage})`,
 		backgroundSize: "cover",
 		backgroundPosition: "center center",
+<<<<<<< HEAD
 		backgroundColor: "#000",
 		paddingTop: theme.spacing(20),
 		[theme.breakpoints.down("sm")]: {
 			paddingTop: theme.spacing(10),
 			paddingBottom: theme.spacing(20),
 			height: "fit-content",
+=======
+		paddingTop: theme.spacing(10),
+		[theme.breakpoints.down("sm")]: {
+			paddingTop: theme.spacing(1),
+			height: "calc(150vh)",
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 		},
 	},
 	content: {
 		backgroundColor: "#FFF",
+<<<<<<< HEAD
 		padding: theme.spacing(5),
 		boxSizing: "border-box",
 		border: "10px solid black",
 		[theme.breakpoints.down("sm")]: {
 			padding: theme.spacing(1),
 		},
+=======
+		paddingTop: theme.spacing(5),
+		paddingBottom: theme.spacing(5),
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 	},
 	title: {
 		fontFamily: "Bebas",
@@ -35,7 +47,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 		fontSize: "1.8rem",
 	},
 	inputTitle: {
+<<<<<<< HEAD
 		marginLeft: "1rem",
+=======
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 		fontSize: "1.5rem",
 		fontFamily: "Bebas",
 	},
@@ -50,7 +65,11 @@ const useStyles = makeStyles((theme: Theme) => ({
 		fontFamily: "Futura",
 		border: "5px solid black",
 		"&:focus": {
+<<<<<<< HEAD
 			outline: "none",
+=======
+			online: "none",
+>>>>>>> f3062854598024edf727f2567d5ec873cd39cf70
 		},
 		padding: "0.2rem 0.5rem",
 		width: "100%",
