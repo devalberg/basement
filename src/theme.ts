@@ -38,6 +38,9 @@ const theme = createMuiTheme({
 			fontFamily: "Bebas",
 			color: "#000",
 			fontSize: 60,
+			[baseTheme.breakpoints.down("xs")]: {
+				fontSize: 46,
+			},
 		},
 		overline: {
 			fontFamily: "Bebas",

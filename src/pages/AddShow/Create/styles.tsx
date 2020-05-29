@@ -11,9 +11,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 		backgroundColor: "#000",
 		paddingTop: theme.spacing(20),
 		[theme.breakpoints.down("sm")]: {
-			paddingTop: theme.spacing(10),
-			paddingBottom: theme.spacing(20),
+			paddingTop: theme.spacing(5),
+			paddingBottom: theme.spacing(5),
 			height: "fit-content",
+			minHeight: "calc(100vh - 64px)",
 		},
 	},
 	content: {

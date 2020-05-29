@@ -50,6 +50,8 @@ const Discover = () => {
 		genre: null,
 	});
 
+	const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
 	const isXs = useXs();
 	const isSm = useSm();
 
@@ -65,6 +67,11 @@ const Discover = () => {
 		setSelectedItems({ genre: null, date: null });
 	};
 
+	const open = () => {
+		!isOpen && Scroll.animateScroll.scrollToTop({ duration: 500 });
+		setIsOpen(true);
+	};
+
 	const navigateAllShows = () => {
 		history.push("/all-shows");
 		setTimeout(() => {
@@ -77,7 +84,7 @@ const Discover = () => {
 	};
 
 	return (
-		<div className={classes.container}>
+		<Box className={classes.container}>
 			<Grid container item>
 				<Grid item xs={1} />
 				<Grid item container xs={10}>
@@ -87,10 +94,12 @@ const Discover = () => {
 						display="flex"
 						justifyContent="center"
 						className={classes.content}
+						mt={isSm && !isOpen ? "50%" : 0}
 					>
 						<Box
 							py={isSm ? 1 : 20}
-							width="90%"
+							width={isSm && !isOpen ? "100%" : "90%"}
+							px={isSm && !isOpen ? 1 : 0}
 							justifySelf="center"
 						>
 							<Grid container spacing={3}>
@@ -105,6 +114,7 @@ const Discover = () => {
 											width={`${
 												isSm ? "100%" : "fit-content"
 											}`}
+											onClick={open}
 										>
 											<Typography variant="h1">
 												Discover {isXs && <br />}
@@ -113,78 +123,98 @@ const Discover = () => {
 										</Box>
 									</Box>
 								</Grid>
-								<Grid item xs={12}>
-									<Box width="100%" textAlign="center">
-										<Button
-											variant="outlined"
-											onClick={() =>
-												history.push("/add-show")
-											}
-										>
-											Add your own show here
-										</Button>
-									</Box>
-								</Grid>
-								<Grid item xs={12} spacing={4}>
-									<Grid container spacing={5}>
-										<Grid item xs={12} md={4}>
-											<Select
-												items={dates}
-												placeholder="date"
-												value={selectedItems.date}
-												onSelect={setDate}
-											/>
-										</Grid>
-										<Grid item xs={12} md={4}>
-											<Select
-												items={genres}
-												placeholder="genre"
-												value={selectedItems.genre}
-												onSelect={setGenre}
-											/>
-										</Grid>
-										<Grid item xs={12} md={4}>
-											<Button variant="contained">
-												Find Your Show
-											</Button>
-											<Box textAlign="right" pt={1}>
-												<span
-													className={
-														classes.resetFilter
+								{(!isSm || isOpen) && (
+									<>
+										<Grid item xs={12}>
+											<Box
+												width="100%"
+												textAlign="center"
+											>
+												<Button
+													variant="outlined"
+													onClick={() =>
+														history.push(
+															"/add-show"
+														)
 													}
-													onClick={resetState}
 												>
-													Reset Filter
-												</span>
+													Add your own show here
+												</Button>
 											</Box>
 										</Grid>
-									</Grid>
-								</Grid>
-								<Grid item xs={12}>
-									<Box
-										width="100%"
-										display="flex"
-										justifyContent="center"
-									>
-										<Box
-											width={isSm ? "100%" : "30%"}
-											mb={isSm ? 3 : 1}
-										>
-											<Button
-												variant="contained"
-												onClick={navigateAllShows}
+										<Grid item xs={12} spacing={4}>
+											<Grid container spacing={5}>
+												<Grid item xs={12} md={4}>
+													<Select
+														items={dates}
+														placeholder="date"
+														value={
+															selectedItems.date
+														}
+														onSelect={setDate}
+													/>
+												</Grid>
+												<Grid item xs={12} md={4}>
+													<Select
+														items={genres}
+														placeholder="genre"
+														value={
+															selectedItems.genre
+														}
+														onSelect={setGenre}
+													/>
+												</Grid>
+												<Grid item xs={12} md={4}>
+													<Button variant="contained">
+														Find Your Show
+													</Button>
+													<Box
+														textAlign="right"
+														pt={1}
+													>
+														<span
+															className={
+																classes.resetFilter
+															}
+															onClick={resetState}
+														>
+															Reset Filter
+														</span>
+													</Box>
+												</Grid>
+											</Grid>
+										</Grid>
+										<Grid item xs={12}>
+											<Box
+												width="100%"
+												display="flex"
+												justifyContent="center"
 											>
-												all shows
-											</Button>
-										</Box>
-									</Box>
-								</Grid>
+												<Box
+													width={
+														isSm ? "100%" : "30%"
+													}
+													mb={isSm ? 3 : 1}
+												>
+													<Button
+														variant="contained"
+														onClick={
+															navigateAllShows
+														}
+													>
+														all shows
+													</Button>
+												</Box>
+											</Box>
+										</Grid>
+									</>
+								)}
 							</Grid>
 						</Box>
 					</Box>
 				</Grid>
 			</Grid>
-		</div>
+		</Box>
 	);
 };
 
