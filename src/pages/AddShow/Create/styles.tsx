@@ -8,16 +8,21 @@ const useStyles = makeStyles((theme: Theme) => ({
 		backgroundImage: `url(${bgImage})`,
 		backgroundSize: "cover",
 		backgroundPosition: "center center",
-		paddingTop: theme.spacing(10),
+		paddingTop: theme.spacing(20),
 		[theme.breakpoints.down("sm")]: {
-			paddingTop: theme.spacing(1),
-			height: "calc(150vh)",
+			paddingTop: theme.spacing(10),
+			paddingBottom: theme.spacing(20),
+			height: "fit-content",
 		},
 	},
 	content: {
 		backgroundColor: "#FFF",
-		paddingTop: theme.spacing(5),
-		paddingBottom: theme.spacing(5),
+		padding: theme.spacing(5),
+		boxSizing: "border-box",
+		border: "10px solid black",
+		[theme.breakpoints.down("sm")]: {
+			padding: theme.spacing(1),
+		},
 	},
 	title: {
 		fontFamily: "Bebas",
@@ -29,6 +34,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		fontSize: "1.8rem",
 	},
 	inputTitle: {
+		marginLeft: "1rem",
 		fontSize: "1.5rem",
 		fontFamily: "Bebas",
 	},
@@ -43,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		fontFamily: "Futura",
 		border: "5px solid black",
 		"&:focus": {
-			online: "none",
+			outline: "none",
 		},
 		padding: "0.2rem 0.5rem",
 		width: "100%",

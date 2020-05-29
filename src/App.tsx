@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import AddShow from "./pages/AddShow";
+import Shows from "./pages/Shows";
 
 function App() {
 	return (
@@ -16,6 +17,9 @@ function App() {
 				</Route>
 				<Route path="/add-show">
 					<AddShow />
+				</Route>
+				<Route path="/shows/:id">
+					<Shows />
 				</Route>
 				<Route path="/">
 					<Home />

@@ -163,7 +163,10 @@ const Discover: React.FC<IProps> = ({ onAllShowClick = () => {} }) => {
 										display="flex"
 										justifyContent="center"
 									>
-										<Box width={isSm ? "100%" : "30%"}>
+										<Box
+											width={isSm ? "100%" : "30%"}
+											mb={isSm ? 3 : 1}
+										>
 											<Button
 												variant="contained"
 												onClick={navigateAllShows}

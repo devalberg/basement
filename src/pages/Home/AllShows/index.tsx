@@ -9,8 +9,7 @@ import brickHousePic from "../../../assets/images/brick.png";
 import rustCavePicMobile from "../../../assets/images/rustcave-mobile.png";
 import desktopPicMobile from "../../../assets/images/desktop-mobile.png";
 import brickHousePicMobile from "../../../assets/images/brick-mobile.png";
-import { useHistory } from "react-router-dom";
-import useXs from "../../../hooks/useXs";
+import { useHistory, Link } from "react-router-dom";
 import useSm from "../../../hooks/useSm";
 import BackToTopButton from "../../../components/BackToTopButton";
 
@@ -20,25 +19,27 @@ const popularEvents = [
 		image: rustCavePic,
 		imageMobile: rustCavePicMobile,
 		date: "18/May/2020",
+		link: "/shows/1",
 	},
 	{
 		title: "Desktop",
 		image: desktopPic,
 		imageMobile: desktopPicMobile,
 		date: "13/July/2020",
+		link: "/shows/0",
 	},
 	{
 		title: "Brickhouse",
 		image: brickHousePic,
 		imageMobile: brickHousePicMobile,
 		date: "24/August/2020",
+		link: "/shows/2",
 	},
 ];
 
 const AllShows = () => {
 	const classes = useStyles();
 	const history = useHistory();
-	const isXs = useXs();
 	const isSm = useSm();
 
 	const goToEvent = (link: string) => () => {
@@ -52,18 +53,22 @@ const AllShows = () => {
 				<Grid item xs={10}>
 					<Grid container spacing={6}>
 						<Grid item xs={12}>
-							<Typography variant="h2">Headline Event</Typography>
-							<div>
-								<img
-									src={
-										isSm
-											? basementGatheringsPicMobile
-											: basementGatheringsPic
-									}
-									alt="basement gatherings"
-									width="100%"
-								/>
-							</div>
+							<Link to="/shows/3">
+								<Typography variant="h2">
+									Headline Event
+								</Typography>
+								<div>
+									<img
+										src={
+											isSm
+												? basementGatheringsPicMobile
+												: basementGatheringsPic
+										}
+										alt="basement gatherings"
+										width="100%"
+									/>
+								</div>
+							</Link>
 						</Grid>
 
 						<Grid item xs={12}>
@@ -76,7 +81,7 @@ const AllShows = () => {
 										xs={12}
 										md={4}
 										className={classes.popular}
-										onClick={goToEvent("/")}
+										onClick={goToEvent(event.link)}
 									>
 										<div className={classes.imageContainer}>
 											<img

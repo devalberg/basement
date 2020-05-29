@@ -85,6 +85,7 @@ const theme = createMuiTheme({
 				borderBottom: "12px solid black",
 				[baseTheme.breakpoints.down("sm")]: {
 					paddingTop: 0,
+					borderBottom: "5px solid black",
 				},
 				zIndex: 99999,
 			},

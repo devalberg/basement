@@ -9,6 +9,10 @@ import useSm from "../../hooks/useSm";
 const ContactUs = () => {
 	const classes = useStyles();
 	const isSm = useSm();
+
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<div className={classes.container}>
 			<Grid container item>

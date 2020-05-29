@@ -2,14 +2,20 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Guide from "./Guide";
 import Create from "./Create";
+import * as Scroll from "react-scroll";
 
 const AddShow = () => {
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<>
 			<Create />
 			<Switch>
-				<Route route="/add-show/guide" exact>
-					<Guide />
+				<Route path="/add-show/guide">
+					<Scroll.Element name="guide">
+						<Guide />
+					</Scroll.Element>
 				</Route>
 			</Switch>
 		</>
