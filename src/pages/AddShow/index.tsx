@@ -6,7 +6,7 @@ import * as Scroll from "react-scroll";
 
 const AddShow = () => {
 	React.useEffect(() => {
-		window.scrollTo(0, 0);
+		Scroll.animateScroll.scrollToTop({ duration: 500 });
 	}, []);
 	return (
 		<>

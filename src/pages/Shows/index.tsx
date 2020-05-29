@@ -1,12 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Template from "./template";
+import * as Scroll from "react-scroll";
 
 import shows from "./data";
 
 const Shows = () => {
 	React.useEffect(() => {
-		window.scrollTo(0, 0);
+		Scroll.animateScroll.scrollToTop({ duration: 500 });
 	}, []);
 	return (
 		<Switch>

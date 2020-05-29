@@ -87,7 +87,6 @@ const theme = createMuiTheme({
 					paddingTop: 0,
 					borderBottom: "5px solid black",
 				},
-				zIndex: 99999,
 			},
 		},
 		MuiDivider: {
@@ -139,6 +138,11 @@ const theme = createMuiTheme({
 				padding: "0 0.5rem",
 			},
 		},
+	},
+	zIndex: {
+		appBar: 500,
+		modal: 400,
+		drawer: 300,
 	},
 });
 

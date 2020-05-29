@@ -5,6 +5,7 @@ import { Grid, Box, Typography, Button } from "@material-ui/core";
 import useXs from "../../../hooks/useXs";
 import useSm from "../../../hooks/useSm";
 import { useHistory } from "react-router-dom";
+import * as Scroll from "react-scroll";
 
 const dates: string[] = [
 	"All Months",
@@ -70,7 +71,13 @@ const Discover: React.FC<IProps> = ({ onAllShowClick = () => {} }) => {
 
 	const navigateAllShows = () => {
 		history.push("/all-shows");
-		onAllShowClick();
+		setTimeout(() => {
+			Scroll.scroller.scrollTo("all-shows", {
+				duration: 500,
+				smooth: "easeOut",
+				offset: -90,
+			});
+		}, 50);
 	};
 
 	return (

@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		padding: "0.2rem 2rem",
 		whiteSpace: "nowrap",
 		width: "fit-content",
+		height: "fit-content",
 		marginTop: theme.spacing(2),
 		marginRight: theme.spacing(1),
 		"&:hover": {
@@ -69,9 +70,16 @@ const useStyles = makeStyles((theme: Theme) => ({
 	itemsContainer: {
 		display: "flex",
 		flexWrap: "wrap",
-		[theme.breakpoints.down("sm")]: {
+		alignItems: "start",
+		[theme.breakpoints.down("md")]: {
 			justifyContent: "center",
 		},
+	},
+	photoContainer: {
+		cursor: "pointer",
+	},
+	photo: {
+		objectFit: "cover",
 	},
 }));
 

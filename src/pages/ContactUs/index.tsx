@@ -5,13 +5,14 @@ import useStyles from "./styles";
 import TextInput from "../../components/TextInput";
 import TextArea from "./TextArea";
 import useSm from "../../hooks/useSm";
+import * as Scroll from "react-scroll";
 
 const ContactUs = () => {
 	const classes = useStyles();
 	const isSm = useSm();
 
 	React.useEffect(() => {
-		window.scrollTo(0, 0);
+		Scroll.animateScroll.scrollToTop({ duration: 500 });
 	}, []);
 	return (
 		<div className={classes.container}>

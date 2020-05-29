@@ -1,14 +1,24 @@
 import { data } from "./template";
 
 import desktopBanner from "../../assets/images/desktop.jpeg";
+import desktopPoster from "../../assets/images/desktopposter.png";
 import rustCaveBanner from "../../assets/images/rustcave.png";
+import rustCavePoster from "../../assets/images/rustcaveposter.png";
 import brickBanner from "../../assets/images/brick.png";
+import brickPoster from "../../assets/images/birckposter.png";
+
+import basementBanner from "../../assets/images/basementgat.png";
+import b1 from "../../assets/images/basement-flyer.png";
+import b2 from "../../assets/images/lineup.png";
+import b3 from "../../assets/images/set time2.png";
+import b4 from "../../assets/images/basement-mapbetter.png";
+import b5 from "../../assets/images/basement-poster.png";
 
 const shows: data[] = [
 	{
 		title: "Desktop",
 		artists: ["Manga Boys", "Red Passport", "Arteezy", "Evil Genius"],
-		photos: [],
+		photos: [desktopBanner],
 		info: {
 			location: "Camden, NW1 ZTA",
 			date: "13/July/2020",
@@ -16,13 +26,13 @@ const shows: data[] = [
 			description: "",
 		},
 		genres: ["Indie", "Hip-Hop", "Electronic"],
-		poster: "",
+		poster: [desktopPoster],
 		banner: desktopBanner,
 	},
 	{
 		title: "rust cave",
 		artists: ["resouse", "faber-castle", "breakout"],
-		photos: [],
+		photos: [rustCaveBanner],
 		info: {
 			location: "Camden, NW1 PVP",
 			date: "18/May/2020",
@@ -30,13 +40,13 @@ const shows: data[] = [
 			description: "",
 		},
 		genres: ["indie", "alternative", "rock"],
-		poster: "",
+		poster: [rustCavePoster],
 		banner: rustCaveBanner,
 	},
 	{
 		title: "brickhouse",
 		artists: ["cellox", "sam hyde", "the world is a fuck", "john mercy"],
-		photos: [],
+		photos: [brickBanner],
 		info: {
 			location: "Camden, NW1 PTE",
 			date: "24/August/2020",
@@ -44,7 +54,7 @@ const shows: data[] = [
 			description: "",
 		},
 		genres: ["techno", "electronic", "folk"],
-		poster: "",
+		poster: [brickPoster],
 		banner: brickBanner,
 	},
 	{
@@ -70,7 +80,7 @@ const shows: data[] = [
 			"los karma hoarders",
 			"onomatopoeic poetry",
 		],
-		photos: [],
+		photos: [brickBanner, desktopBanner, rustCaveBanner],
 		info: {
 			location: "",
 			date: "",
@@ -87,8 +97,8 @@ const shows: data[] = [
 			"alternative",
 			"rock",
 		],
-		poster: "",
-		banner: brickBanner,
+		poster: [b1, b2, b3, b4, b5],
+		banner: basementBanner,
 	},
 ];
 

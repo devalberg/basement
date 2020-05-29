@@ -15,6 +15,10 @@ const Home = () => {
 		}, 50);
 	};
 
+	React.useEffect(() => {
+		Scroll.animateScroll.scrollToTop({ duration: 500 });
+	}, []);
+
 	return (
 		<>
 			<Discover onAllShowClick={onAllShowClick} />
